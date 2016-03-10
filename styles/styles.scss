@@ -19,13 +19,16 @@ body{
     }
   }
   .introSpace{
+    background: url(../images/main.jpg)no-repeat center;
+    background-size: cover;
     .introMessage{}
 
-    .about{
-      text-align: center;
-      color: $white;
-      background: $red;
-    }
+  }
+  .about{
+    text-align: center;
+    color: $white;
+    background: $red;
+    font-size: 0.75em;
   }
   .categories{
 

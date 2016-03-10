@@ -7,9 +7,13 @@ body header {
     text-align: right; }
     body header .logo img {
       width: 50%; }
-body .introSpace .about {
+body .introSpace {
+  background: url(../images/main.jpg) no-repeat center;
+  background-size: cover; }
+body .about {
   text-align: center;
   color: #fff;
-  background: #D24958; }
+  background: #D24958;
+  font-size: 0.75em; }
 
 /*# sourceMappingURL=styles.css.map */
