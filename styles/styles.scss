@@ -3,6 +3,7 @@
 $white: #fff;
 $red : #D24958;
 $blue: #1B528A;
+$green: #008036;
 
 body{
   margin: 0;
@@ -59,6 +60,29 @@ body{
 
   }
   .trailsWrap{
+    background: $green;
+    padding-bottom: 1em;
+    h4{
+      text-align: center;
+      color: $white;
+      font-weight: normal;
+      font-size: 2em;
+      margin: 0;
+      padding: 0.5em 0;
+    }
+    ul.trailsList{
+      list-style: none;
+      padding: 0;
+      li{
+        text-align: center;
+        border-bottom: 1px solid $white;
+        padding: 0.5em;
+        a{
+          color: $white;
+          text-transform: uppercase;
+        }
+      }
+    }
 
   }
   .eastsideTrailInfo{

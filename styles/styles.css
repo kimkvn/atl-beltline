@@ -32,6 +32,26 @@ body {
     padding: 0.5em; }
     body .about h4 {
       font-weight: normal; }
+  body .trailsWrap {
+    background: #008036;
+    padding-bottom: 1em; }
+    body .trailsWrap h4 {
+      text-align: center;
+      color: #fff;
+      font-weight: normal;
+      font-size: 2em;
+      margin: 0;
+      padding: 0.5em 0; }
+    body .trailsWrap ul.trailsList {
+      list-style: none;
+      padding: 0; }
+      body .trailsWrap ul.trailsList li {
+        text-align: center;
+        border-bottom: 1px solid #fff;
+        padding: 0.5em; }
+        body .trailsWrap ul.trailsList li a {
+          color: #fff;
+          text-transform: uppercase; }
   body footer {
     background: #1B528A; }
     body footer ul.socialMediaWrapper {
