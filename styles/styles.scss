@@ -2,7 +2,7 @@
 /*Color Shortcuts*/
 $white: #fff;
 $red : #D24958;
-$footerBlue: #1B528A;
+$blue: #1B528A;
 
 body{
   margin: 0;
@@ -21,9 +21,7 @@ body{
     }
   }
   .introSpace{
-    //background: url(../images/main.jpg)no-repeat center;
-    background-size: cover;
-
+    position: relative;
     .imgWrap{
       .imgWrapInner{
         img{
@@ -31,7 +29,20 @@ body{
         }
       }
     }
-    .introMessage{}
+    .introMessage{
+      color: $blue;
+      position: absolute;
+      width: 18em;
+      font-size: 0.75em;
+      top: 0;
+      right: 5%;
+      h3{
+        font-weight: normal;
+      }
+      a, a:visited{
+        color: $blue;
+      }
+    }
 
   }
   .about{
@@ -39,6 +50,10 @@ body{
     color: $white;
     background: $red;
     font-size: 0.75em;
+    padding: 0.5em;
+    h4{
+      font-weight: normal;
+    }
   }
   .categories{
 
@@ -54,7 +69,7 @@ body{
   }
 
   footer{
-    background: $footerBlue;
+    background: $blue;
       ul.socialMediaWrapper{
         padding: 0;
         list-style: none;
