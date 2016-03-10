@@ -2,6 +2,7 @@
 /*Color Shortcuts*/
 $white: #fff;
 $red : #D24958;
+$footerBlue: #1B528A;
 
 body{
   margin: 0;
@@ -53,6 +54,20 @@ body{
   }
 
   footer{
-    display: none;
+    background: $footerBlue;
+      ul.socialMediaWrapper{
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        li{
+          display: inline;
+          a{
+            img{
+              width: 5%;
+            }
+          }
+        }
+      }
+
   }
 }

@@ -19,6 +19,14 @@ body {
     background: #D24958;
     font-size: 0.75em; }
   body footer {
-    display: none; }
+    background: #1B528A; }
+    body footer ul.socialMediaWrapper {
+      padding: 0;
+      list-style: none;
+      text-align: center; }
+      body footer ul.socialMediaWrapper li {
+        display: inline; }
+        body footer ul.socialMediaWrapper li a img {
+          width: 5%; }
 
 /*# sourceMappingURL=styles.css.map */
