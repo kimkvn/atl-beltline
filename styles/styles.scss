@@ -4,9 +4,14 @@ $white: #fff;
 $red : #D24958;
 $blue: #1B528A;
 $green: #008036;
+$lightBlue: #D1DEE9;
 
 body{
   margin: 0;
+
+  h4{
+    margin: 0;
+  }
   header{
     min-height: 95px;
     .menuWrapper{
@@ -86,7 +91,7 @@ body{
 
   }
   .eastsideTrailInfo{
-
+    background: $lightBlue;
   }
   .beltlineMap{
 

@@ -1,6 +1,8 @@
 /*Color Shortcuts*/
 body {
   margin: 0; }
+  body h4 {
+    margin: 0; }
   body header {
     min-height: 95px; }
     body header .menuWrapper .menu {
@@ -52,6 +54,8 @@ body {
         body .trailsWrap ul.trailsList li a {
           color: #fff;
           text-transform: uppercase; }
+  body .eastsideTrailInfo {
+    background: #D1DEE9; }
   body footer {
     background: #1B528A; }
     body footer ul.socialMediaWrapper {
