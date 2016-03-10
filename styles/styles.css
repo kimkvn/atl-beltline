@@ -1,3 +1,15 @@
-
+/*Color Shortcuts*/
+body header {
+  min-height: 95px; }
+  body header .menuWrapper .menu {
+    display: none; }
+  body header .logo {
+    text-align: right; }
+    body header .logo img {
+      width: 50%; }
+body .introSpace .about {
+  text-align: center;
+  color: #fff;
+  background: #D24958; }
 
 /*# sourceMappingURL=styles.css.map */

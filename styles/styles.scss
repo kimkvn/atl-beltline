@@ -1,3 +1,46 @@
+
+/*Color Shortcuts*/
+$white: #fff;
+$red : #D24958;
+
 body{
-  
+  header{
+    min-height: 95px;
+    .menuWrapper{
+      .menu{
+        display: none;
+      }
+    }
+    .logo{
+      text-align: right;
+      img{
+        width: 50%;
+      }
+    }
+  }
+  .introSpace{
+    .introMessage{}
+
+    .about{
+      text-align: center;
+      color: $white;
+      background: $red;
+    }
+  }
+  .categories{
+
+  }
+  .trailsWrap{
+
+  }
+  .eastsideTrailInfo{
+
+  }
+  .beltlineMap{
+
+  }
+
+  footer{
+
+  }
 }
