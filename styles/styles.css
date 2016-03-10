@@ -1,19 +1,24 @@
 /*Color Shortcuts*/
-body header {
-  min-height: 95px; }
-  body header .menuWrapper .menu {
+body {
+  margin: 0; }
+  body header {
+    min-height: 95px; }
+    body header .menuWrapper .menu {
+      display: none; }
+    body header .logo {
+      text-align: right; }
+      body header .logo img {
+        width: 50%; }
+  body .introSpace {
+    background-size: cover; }
+    body .introSpace .imgWrap .imgWrapInner img {
+      width: 100%; }
+  body .about {
+    text-align: center;
+    color: #fff;
+    background: #D24958;
+    font-size: 0.75em; }
+  body footer {
     display: none; }
-  body header .logo {
-    text-align: right; }
-    body header .logo img {
-      width: 50%; }
-body .introSpace {
-  background: url(../images/main.jpg) no-repeat center;
-  background-size: cover; }
-body .about {
-  text-align: center;
-  color: #fff;
-  background: #D24958;
-  font-size: 0.75em; }
 
 /*# sourceMappingURL=styles.css.map */

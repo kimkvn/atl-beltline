@@ -4,6 +4,7 @@ $white: #fff;
 $red : #D24958;
 
 body{
+  margin: 0;
   header{
     min-height: 95px;
     .menuWrapper{
@@ -19,8 +20,16 @@ body{
     }
   }
   .introSpace{
-    background: url(../images/main.jpg)no-repeat center;
+    //background: url(../images/main.jpg)no-repeat center;
     background-size: cover;
+
+    .imgWrap{
+      .imgWrapInner{
+        img{
+          width: 100%;
+        }
+      }
+    }
     .introMessage{}
 
   }
@@ -44,6 +53,6 @@ body{
   }
 
   footer{
-
+    display: none;
   }
 }
