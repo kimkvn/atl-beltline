@@ -4,7 +4,8 @@ body {
   body h4 {
     margin: 0; }
   body header {
-    min-height: 95px; }
+    min-height: 95px;
+    background: #D1DEE9; }
     body header .menuWrapper .menu {
       display: none; }
     body header .logo {
@@ -55,7 +56,19 @@ body {
           color: #fff;
           text-transform: uppercase; }
   body .eastsideTrailInfo {
-    background: #D1DEE9; }
+    background: #D1DEE9;
+    padding: 4.5em;
+    color: #1B528A; }
+    body .eastsideTrailInfo h4 {
+      font-size: 2em;
+      margin-bottom: 0.75em; }
+    body .eastsideTrailInfo p {
+      margin-bottom: 1.75em;
+      line-height: 1.5em; }
+    body .eastsideTrailInfo a {
+      border-bottom: 1px solid #1B528A;
+      color: #1B528A;
+      padding-bottom: 0.25em; }
   body footer {
     background: #1B528A; }
     body footer ul.socialMediaWrapper {
