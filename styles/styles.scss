@@ -146,14 +146,18 @@ body{
         address{
           line-height: 1.2em;
         }
-        .contactInfo{
-          line-height: 1.2em;
-          margin-bottom: 1.5em;
-        }
-        .copyright{
-          padding-bottom: 1.5em;
-        }
-      }
 
+      }
+      .contactInfo{
+        text-align: center;
+        color: $white;
+        line-height: 1.2em;
+        margin-bottom: 1.5em;
+      }
+      .copyright{
+        text-align: center;
+        color: $white;
+        padding-bottom: 1.5em;
+      }
   }
 }

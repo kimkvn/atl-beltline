@@ -93,10 +93,14 @@ body {
       color: #fff; }
       body footer .addressWrap address {
         line-height: 1.2em; }
-      body footer .addressWrap .contactInfo {
-        line-height: 1.2em;
-        margin-bottom: 1.5em; }
-      body footer .addressWrap .copyright {
-        padding-bottom: 1.5em; }
+    body footer .contactInfo {
+      text-align: center;
+      color: #fff;
+      line-height: 1.2em;
+      margin-bottom: 1.5em; }
+    body footer .copyright {
+      text-align: center;
+      color: #fff;
+      padding-bottom: 1.5em; }
 
 /*# sourceMappingURL=styles.css.map */
