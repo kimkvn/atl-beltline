@@ -65,11 +65,37 @@ body{
     }
   }
   .categories{
+    .category{
+      height: 8em;
+      background-size: 100%;
+      a{
+        img{
+
+        }
+      }
+    }
+    .category.parks{
+      background: url(../images/child.jpg) 50% 33%;
+      background-size: 100%;
+    }
+    .category.trails{
+      background: url(../images/stroller.jpg) 50% 20%;
+      background-size: 100%;
+    }
+    .category.events{
+      background: url(../images/lantern2.jpg) 50% 25%;
+      background-size: 95%;
+    }
+    .category.tours{
+      background: url(../images/bridge.jpg) 50% 30%;
+      background-size: 100%;
+    }
 
   }
   .trailsWrap{
     background: $green;
     padding-bottom: 1em;
+    position: relative;
     h4{
       text-align: center;
       color: $white;

@@ -35,9 +35,25 @@ body {
     padding: 0.5em; }
     body .about h4 {
       font-weight: normal; }
+  body .categories .category {
+    height: 8em;
+    background-size: 100%; }
+  body .categories .category.parks {
+    background: url(../images/child.jpg) 50% 33%;
+    background-size: 100%; }
+  body .categories .category.trails {
+    background: url(../images/stroller.jpg) 50% 20%;
+    background-size: 100%; }
+  body .categories .category.events {
+    background: url(../images/lantern2.jpg) 50% 25%;
+    background-size: 95%; }
+  body .categories .category.tours {
+    background: url(../images/bridge.jpg) 50% 30%;
+    background-size: 100%; }
   body .trailsWrap {
     background: #008036;
-    padding-bottom: 1em; }
+    padding-bottom: 1em;
+    position: relative; }
     body .trailsWrap h4 {
       text-align: center;
       color: #fff;
