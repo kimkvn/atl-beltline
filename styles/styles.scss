@@ -250,7 +250,16 @@ body{
     .mapBelow{
       display: none;
     }
-
+    footer{
+      ul.socialMediaWrapper{
+        li{
+          margin: 0 0.1em;
+          a img{
+            width: 12%;
+          }
+        }
+      }
+    }
   }
 
 }

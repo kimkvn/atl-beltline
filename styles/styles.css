@@ -163,6 +163,10 @@ body {
   body .mapAbove {
     display: block; }
   body .mapBelow {
-    display: none; } }
+    display: none; }
+  body footer ul.socialMediaWrapper li {
+    margin: 0 0.1em; }
+    body footer ul.socialMediaWrapper li a img {
+      width: 12%; } }
 
 /*# sourceMappingURL=styles.css.map */
