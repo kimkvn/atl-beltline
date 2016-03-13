@@ -35,9 +35,19 @@ body {
     padding: 0.5em; }
     body .about h4 {
       font-weight: normal; }
+  body .categories a {
+    padding: 0; }
   body .categories .category {
     height: 8em;
     background-size: 100%; }
+    body .categories .category h4 {
+      font-size: 2em;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
   body .categories .category.parks {
     background: url(../images/child.jpg) 50% 33%;
     background-size: 100%; }
@@ -118,5 +128,10 @@ body {
       text-align: center;
       color: #fff;
       padding-bottom: 1.5em; }
+
+/*   Media Queries   */
+@media (min-width: 992px) {
+  body .categories .category {
+    height: 17em; } }
 
 /*# sourceMappingURL=styles.css.map */

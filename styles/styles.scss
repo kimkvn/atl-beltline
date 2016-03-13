@@ -65,14 +65,23 @@ body{
     }
   }
   .categories{
+    a{
+      padding: 0;
+    }
     .category{
       height: 8em;
       background-size: 100%;
-      a{
-        img{
 
-        }
+      h4{
+        font-size: 2em;
+        font-weight: bold;
+        color: $white;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
       }
+
     }
     .category.parks{
       background: url(../images/child.jpg) 50% 33%;
@@ -185,5 +194,13 @@ body{
         color: $white;
         padding-bottom: 1.5em;
       }
+  }
+}
+
+
+/*   Media Queries   */
+@media(min-width: 992px){
+  body .categories .category{
+    height: 17em;
   }
 }
