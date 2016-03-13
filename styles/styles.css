@@ -103,6 +103,8 @@ body {
       border-bottom: 1px solid #1B528A;
       color: #1B528A;
       padding-bottom: 0.25em; }
+  body .mapAbove {
+    display: none; }
   body .beltlineMap {
     padding: 0; }
     body .beltlineMap .mapWrap {
@@ -157,6 +159,10 @@ body {
     body .trailsWrap ul.trailsList li a {
       padding-bottom: 0.25em; }
       body .trailsWrap ul.trailsList li a:hover {
-        border-bottom: 1px solid #fff; } }
+        border-bottom: 1px solid #fff; }
+  body .mapAbove {
+    display: block; }
+  body .mapBelow {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
