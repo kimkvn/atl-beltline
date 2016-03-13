@@ -96,7 +96,8 @@ body {
       color: #1B528A;
       padding-bottom: 0.25em; }
   body footer {
-    background: #1B528A; }
+    background: #1B528A url(../images/footerBg.png) no-repeat center;
+    background-size: 100%; }
     body footer h5 {
       margin: 0;
       text-align: center;

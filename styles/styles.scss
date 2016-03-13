@@ -151,7 +151,8 @@ body{
   }
 
   footer{
-    background: $blue;
+    background: $blue url(../images/footerBg.png) no-repeat center;
+    background-size: 100%;
     h5{
       margin: 0;
       text-align: center;
