@@ -1,4 +1,7 @@
 /*Color Shortcuts*/
+a:hover {
+  text-decoration: none; }
+
 body {
   margin: 0; }
   body h4 {
@@ -32,9 +35,12 @@ body {
     color: #fff;
     background: #D24958;
     font-size: 0.75em;
-    padding: 0.5em; }
+    padding: 3em; }
     body .about h4 {
-      font-weight: normal; }
+      font-weight: normal;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      margin: 0 auto; }
   body .categories a {
     padding: 0; }
   body .categories .category {
@@ -133,6 +139,15 @@ body {
 /*   Media Queries   */
 @media (min-width: 992px) {
   body .categories .category {
-    height: 17em; } }
+    height: 17em; }
+  body .about h4 {
+    max-width: 70%;
+    font-size: 1.75em; }
+  body .trailsWrap ul.trailsList li {
+    border-bottom: none; }
+    body .trailsWrap ul.trailsList li a {
+      padding-bottom: 0.25em; }
+      body .trailsWrap ul.trailsList li a:hover {
+        border-bottom: 1px solid #fff; } }
 
 /*# sourceMappingURL=styles.css.map */

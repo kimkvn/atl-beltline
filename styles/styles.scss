@@ -5,7 +5,9 @@ $red : #D24958;
 $blue: #1B528A;
 $green: #008036;
 $lightBlue: #D1DEE9;
-
+a:hover{
+  text-decoration: none;
+}
 
 body{
   margin: 0;
@@ -28,6 +30,7 @@ body{
       }
     }
   }
+
   .introSpace{
     position: relative;
     .imgWrap{
@@ -53,15 +56,19 @@ body{
     }
 
   }
+
   .about{
     text-align: center;
     color: $white;
     background: $red;
     font-size: 0.75em;
-    padding: 0.5em;
+    padding: 3em;
 
     h4{
       font-weight: normal;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      margin: 0 auto;
     }
   }
   .categories{
@@ -201,7 +208,28 @@ body{
 
 /*   Media Queries   */
 @media(min-width: 992px){
-  body .categories .category{
-    height: 17em;
+  body{
+    .categories .category{
+      height: 17em;
+    }
+    .about h4{
+      max-width: 70%;
+      font-size: 1.75em;
+    }
+    .trailsWrap{
+      ul.trailsList{
+        li{
+          border-bottom: none;
+          a{
+            padding-bottom: 0.25em;
+            &:hover{
+              border-bottom: 1px solid $white;
+            }
+          }
+        }
+      }
+
+    }
   }
+
 }
