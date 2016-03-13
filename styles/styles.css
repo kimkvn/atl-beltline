@@ -17,8 +17,12 @@ body {
         width: 50%; }
   body .introSpace {
     position: relative; }
-    body .introSpace .imgWrap .imgWrapInner img {
-      width: 100%; }
+    body .introSpace .imgWrap .imgWrapInner {
+      overflow: hidden;
+      height: 27em; }
+      body .introSpace .imgWrap .imgWrapInner img {
+        width: 170%;
+        transform: translateX(-25%); }
     body .introSpace .introMessage {
       color: #1B528A;
       position: absolute;
