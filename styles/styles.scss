@@ -8,9 +8,6 @@ $lightBlue: #D1DEE9;
 a:hover{
   text-decoration: none;
 }
-.container-fluid{
-  padding: 0;
-}
 body{
   margin: 0;
 
@@ -160,6 +157,7 @@ body{
   }
 
   .beltlineMap{
+    padding: 0;
     .mapWrap{
       padding:1em;
       background: $white;
