@@ -98,7 +98,13 @@ body {
           padding: 0;
           list-style: none; }
           body header .menuWrapper .menu ul li {
-            margin: 1em 0; }
+            margin: 2em 0; }
+            body header .menuWrapper .menu ul li a {
+              font-size: 1.5em;
+              color: #fff; }
+        body header .menuWrapper .menu .searchBox input {
+          height: 2em;
+          font-size: 1.5em; }
     body header .logo {
       text-align: right; }
       body header .logo img {
