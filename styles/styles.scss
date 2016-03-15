@@ -18,7 +18,7 @@ body{
     min-height: 95px;
     background: $lightBlue;
     .menuWrapper{
-      .cmn-toggle-switch {
+      .menuBtn{
         display: block;
         position: relative;
         overflow: hidden;
@@ -38,11 +38,14 @@ body{
         -webkit-transition: background 0.3s;
                 transition: background 0.3s;
         background-color: transparent;
+
+
+
       }
-      .cmn-toggle-switch:focus {
+      .menuBtn:focus {
         outline: none;
       }
-      .cmn-toggle-switch span {
+      .menuBtn span {
         display: block;
         position: absolute;
         top: 45px;
@@ -52,8 +55,8 @@ body{
         background: white;
       }
 
-      .cmn-toggle-switch span::before,
-      .cmn-toggle-switch span::after {
+      .menuBtn span::before,
+      .menuBtn span::after {
         position: absolute;
         display: block;
         left: 0;
@@ -63,65 +66,58 @@ body{
         content: "";
       }
 
-      .cmn-toggle-switch span::before {
+      .menuBtn span::before {
         top: -27px;
       }
 
-      .cmn-toggle-switch span::after {
+      .menuBtn span::after {
         bottom: -27px;
       }
-      .cmn-toggle-switch__htx {
-        background-color: #ff3264;
-      }
 
-      .cmn-toggle-switch__htx span {
+      .menuBtn span {
         -webkit-transition: background 0 0.3s;
                 transition: background 0 0.3s;
       }
 
-      .cmn-toggle-switch__htx span::before,
-      .cmn-toggle-switch__htx span::after {
+      .menuBtn span::before,
+      .menuBtn span::after {
         -webkit-transition-duration: 0.3s, 0.3s;
                 transition-duration: 0.3s, 0.3s;
         -webkit-transition-delay: 0.3s, 0;
                 transition-delay: 0.3s, 0;
       }
 
-      .cmn-toggle-switch__htx span::before {
+      .menuBtn span::before {
         -webkit-transition-property: top, -webkit-transform;
                 transition-property: top, transform;
       }
 
-      .cmn-toggle-switch__htx span::after {
+      .menuBtn span::after {
         -webkit-transition-property: bottom, -webkit-transform;
                 transition-property: bottom, transform;
       }
 
       /* active state, i.e. menu open */
-      .cmn-toggle-switch__htx.active {
-        background-color: #cb0032;
-      }
-
-      .cmn-toggle-switch__htx.active span {
+      .menuBtn.active span {
         background: none;
       }
 
-      .cmn-toggle-switch__htx.active span::before {
+      .menuBtn.active span::before {
         top: 0;
         -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
       }
 
-      .cmn-toggle-switch__htx.active span::after {
+      .menuBtn.active span::after {
         bottom: 0;
         -webkit-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
                 transform: rotate(-45deg);
       }
 
-      .cmn-toggle-switch__htx.active span::before,
-      .cmn-toggle-switch__htx.active span::after {
+      .menuBtn.active span::before,
+      .menuBtn.active span::after {
         -webkit-transition-delay: 0, 0.3s;
                 transition-delay: 0, 0.3s;
       }
