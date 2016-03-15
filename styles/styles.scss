@@ -35,10 +35,11 @@ body{
         border-radius: 0;
         border: none;
         cursor: pointer;
+        float: left;
         -webkit-transition: background 0.3s;
                 transition: background 0.3s;
         background-color: transparent;
-
+        z-index: 2;
 
 
       }
@@ -49,10 +50,10 @@ body{
         display: block;
         position: absolute;
         top: 45px;
-        left: 18px;
-        right: 18px;
+        left: 30px;
+        right: 30px;
         height: 6px;
-        background: white;
+        background: $blue;
       }
 
       .menuBtn span::before,
@@ -62,16 +63,16 @@ body{
         left: 0;
         width: 100%;
         height: 6px;
-        background-color: #fff;
+        background-color: $blue;
         content: "";
       }
 
       .menuBtn span::before {
-        top: -27px;
+        top: -15px;
       }
 
       .menuBtn span::after {
-        bottom: -27px;
+        bottom: -15px;
       }
 
       .menuBtn span {
@@ -118,6 +119,7 @@ body{
 
       .menuBtn.active span::before,
       .menuBtn.active span::after {
+        background: $white;
         -webkit-transition-delay: 0, 0.3s;
                 transition-delay: 0, 0.3s;
       }
@@ -129,7 +131,7 @@ body{
       .menu{
         display: none;
         position: absolute;
-        z-index: 2;
+        z-index: 1;
         padding: 8em 2.5em;
         background: $blue;
         ul{

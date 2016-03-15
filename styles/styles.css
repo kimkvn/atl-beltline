@@ -28,19 +28,21 @@ body {
         border-radius: 0;
         border: none;
         cursor: pointer;
+        float: left;
         -webkit-transition: background 0.3s;
         transition: background 0.3s;
-        background-color: transparent; }
+        background-color: transparent;
+        z-index: 2; }
       body header .menuWrapper .menuBtn:focus {
         outline: none; }
       body header .menuWrapper .menuBtn span {
         display: block;
         position: absolute;
         top: 45px;
-        left: 18px;
-        right: 18px;
+        left: 30px;
+        right: 30px;
         height: 6px;
-        background: white; }
+        background: #1B528A; }
       body header .menuWrapper .menuBtn span::before,
       body header .menuWrapper .menuBtn span::after {
         position: absolute;
@@ -48,12 +50,12 @@ body {
         left: 0;
         width: 100%;
         height: 6px;
-        background-color: #fff;
+        background-color: #1B528A;
         content: ""; }
       body header .menuWrapper .menuBtn span::before {
-        top: -27px; }
+        top: -15px; }
       body header .menuWrapper .menuBtn span::after {
-        bottom: -27px; }
+        bottom: -15px; }
       body header .menuWrapper .menuBtn span {
         -webkit-transition: background 0 0.3s;
         transition: background 0 0.3s; }
@@ -83,12 +85,13 @@ body {
         transform: rotate(-45deg); }
       body header .menuWrapper .menuBtn.active span::before,
       body header .menuWrapper .menuBtn.active span::after {
+        background: #fff;
         -webkit-transition-delay: 0, 0.3s;
         transition-delay: 0, 0.3s; }
       body header .menuWrapper .menu {
         display: none;
         position: absolute;
-        z-index: 2;
+        z-index: 1;
         padding: 8em 2.5em;
         background: #1B528A; }
         body header .menuWrapper .menu ul {
