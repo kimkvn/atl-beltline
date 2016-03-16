@@ -9,30 +9,42 @@ body {
   body header {
     min-height: 95px;
     background: #D1DEE9; }
-    body header .menuWrapper {
+    body header .searchBox input {
+      border: none;
+      padding: 0.25em; }
+      body header .searchBox input::-webkit-input-placeholder {
+        color: #1B528A; }
+      body header .searchBox input:-moz-placeholder {
+        /* Firefox 18- */
+        color: #1B528A; }
+      body header .searchBox input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #1B528A; }
+      body header .searchBox input:-ms-input-placeholder {
+        color: #1B528A; }
+    body header .menuWrapper .menuBtn {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 108px;
+      height: 96px;
+      font-size: 0;
+      text-indent: -9999px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+      cursor: pointer;
+      float: left;
+      -webkit-transition: background 0.3s;
+      transition: background 0.3s;
+      background-color: transparent;
+      z-index: 2;
       /* active state, i.e. menu open */ }
-      body header .menuWrapper .menuBtn {
-        display: block;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        width: 108px;
-        height: 96px;
-        font-size: 0;
-        text-indent: -9999px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        box-shadow: none;
-        border-radius: 0;
-        border: none;
-        cursor: pointer;
-        float: left;
-        -webkit-transition: background 0.3s;
-        transition: background 0.3s;
-        background-color: transparent;
-        z-index: 2; }
       body header .menuWrapper .menuBtn:focus {
         outline: none; }
       body header .menuWrapper .menuBtn span {
@@ -41,79 +53,94 @@ body {
         top: 45px;
         left: 30px;
         right: 30px;
-        height: 6px;
-        background: #1B528A; }
-      body header .menuWrapper .menuBtn span::before,
-      body header .menuWrapper .menuBtn span::after {
-        position: absolute;
-        display: block;
-        left: 0;
-        width: 100%;
-        height: 6px;
-        background-color: #1B528A;
-        content: ""; }
-      body header .menuWrapper .menuBtn span::before {
-        top: -15px; }
-      body header .menuWrapper .menuBtn span::after {
-        bottom: -15px; }
-      body header .menuWrapper .menuBtn span {
+        height: 4px;
+        background: #1B528A;
         -webkit-transition: background 0 0.3s;
         transition: background 0 0.3s; }
-      body header .menuWrapper .menuBtn span::before,
-      body header .menuWrapper .menuBtn span::after {
-        -webkit-transition-duration: 0.3s, 0.3s;
-        transition-duration: 0.3s, 0.3s;
-        -webkit-transition-delay: 0.3s, 0;
-        transition-delay: 0.3s, 0; }
-      body header .menuWrapper .menuBtn span::before {
-        -webkit-transition-property: top, -webkit-transform;
-        transition-property: top, transform; }
-      body header .menuWrapper .menuBtn span::after {
-        -webkit-transition-property: bottom, -webkit-transform;
-        transition-property: bottom, transform; }
+        body header .menuWrapper .menuBtn span::before, body header .menuWrapper .menuBtn span::after {
+          position: absolute;
+          display: block;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: #1B528A;
+          content: "";
+          -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+          -webkit-transition-delay: 0.3s, 0;
+          transition-delay: 0.3s, 0; }
+        body header .menuWrapper .menuBtn span::before {
+          top: -11px;
+          -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform; }
+        body header .menuWrapper .menuBtn span::after {
+          bottom: -11px;
+          -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform; }
       body header .menuWrapper .menuBtn.active span {
         background: none; }
-      body header .menuWrapper .menuBtn.active span::before {
-        top: 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg); }
-      body header .menuWrapper .menuBtn.active span::after {
-        bottom: 0;
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg); }
-      body header .menuWrapper .menuBtn.active span::before,
-      body header .menuWrapper .menuBtn.active span::after {
-        background: #fff;
-        -webkit-transition-delay: 0, 0.3s;
-        transition-delay: 0, 0.3s; }
-      body header .menuWrapper .menu {
-        display: none;
-        position: absolute;
-        z-index: 1;
-        padding: 8em 2.5em;
-        background: #1B528A; }
-        body header .menuWrapper .menu ul {
-          padding: 0;
-          list-style: none; }
-          body header .menuWrapper .menu ul li {
-            margin: 2em 0; }
-            body header .menuWrapper .menu ul li a {
-              font-size: 1.5em;
-              color: #fff; }
-        body header .menuWrapper .menu .searchBox input {
-          height: 2em;
-          font-size: 1.5em; }
+        body header .menuWrapper .menuBtn.active span::before, body header .menuWrapper .menuBtn.active span::after {
+          background: #fff;
+          -webkit-transition-delay: 0, 0.3s;
+          transition-delay: 0, 0.3s; }
+        body header .menuWrapper .menuBtn.active span::before {
+          top: 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        body header .menuWrapper .menuBtn.active span::after {
+          bottom: 0;
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+    body header .menuWrapper .menu {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      padding: 8em 2.5em;
+      background: #1B528A; }
+      body header .menuWrapper .menu ul {
+        padding: 0;
+        list-style: none; }
+        body header .menuWrapper .menu ul li {
+          margin: 2em 0; }
+          body header .menuWrapper .menu ul li a {
+            font-size: 1.5em;
+            color: #fff; }
+      body header .menuWrapper .menu .searchBox input {
+        height: 2em;
+        font-size: 1.5em; }
     body header .logo {
       text-align: right; }
       body header .logo img {
         width: 50%; }
+    body header .menuWide {
+      display: none;
+      padding-left: 25%;
+      padding-top: 2.75em; }
+      body header .menuWide ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        body header .menuWide ul li {
+          display: inline;
+          margin: 2em; }
+          body header .menuWide ul li a {
+            text-transform: uppercase; }
+            body header .menuWide ul li a:hover {
+              color: #D24958; }
+        body header .menuWide ul .searchBox {
+          display: inline;
+          float: right;
+          margin-right: 5em; }
+          body header .menuWide ul .searchBox input {
+            text-align: right; }
   body .introSpace {
     position: relative; }
     body .introSpace .imgWrap .imgWrapInner {
       overflow: hidden;
-      height: 27em; }
+      width: 100%;
+      height: 30em; }
       body .introSpace .imgWrap .imgWrapInner img {
         width: 170%;
         transform: translateX(-25%); }
@@ -122,12 +149,16 @@ body {
       position: absolute;
       width: 18em;
       font-size: 0.75em;
-      top: 0;
+      top: 8%;
       right: 5%; }
       body .introSpace .introMessage h3 {
-        font-weight: normal; }
+        font-weight: normal;
+        font-size: 2em;
+        line-height: 1em; }
       body .introSpace .introMessage a, body .introSpace .introMessage a:visited {
-        color: #1B528A; }
+        color: #1B528A;
+        font-size: 2em;
+        text-decoration: underline; }
   body .about {
     text-align: center;
     color: #fff;
@@ -140,7 +171,32 @@ body {
       line-height: 1.5em;
       margin: 0 auto; }
   body .categories a {
-    padding: 0; }
+    display: block;
+    padding: 0;
+    text-decoration: none; }
+    body .categories a span {
+      transition: background 0.5s; }
+    body .categories a:hover span.filter {
+      background: transparent; }
+    body .categories a:hover h4 {
+      top: 45%; }
+  body .categories .filter {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute; }
+    body .categories .filter.parksFilter {
+      background: rgba(255, 0, 0, 0.4);
+      /*Red*/ }
+    body .categories .filter.trailsFilter {
+      background: rgba(0, 255, 0, 0.2);
+      /*Green*/ }
+    body .categories .filter.eventsFilter {
+      background: rgba(255, 255, 0, 0.3);
+      /*Yellow*/ }
+    body .categories .filter.toursFilter {
+      background: rgba(0, 0, 255, 0.3);
+      /*Blue*/ }
   body .categories .category {
     height: 8em;
     background-size: 100%; }
@@ -151,7 +207,8 @@ body {
       text-align: center;
       position: relative;
       top: 50%;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      transition: top 0.3s; }
   body .categories .category.parks {
     background: url(../images/child.jpg) 50% 33%;
     background-size: 100%; }
@@ -184,7 +241,8 @@ body {
         padding: 0.5em; }
         body .trailsWrap ul.trailsList li a {
           color: #fff;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          position: relative; }
   body .eastsideTrailWrap {
     background: #D1DEE9; }
   body .eastsideTrailInfo {
@@ -212,7 +270,7 @@ body {
         margin: 0 auto; }
   body footer {
     background: #1B528A url(../images/footerBg.png) no-repeat center;
-    background-size: 100%; }
+    background-size: cover; }
     body footer h5 {
       margin: 0;
       text-align: center;
@@ -245,8 +303,54 @@ body {
       color: #fff;
       padding-bottom: 1.5em; }
 
-/*   Media Queries   */
+/*---Media Queries-----*/
+@media (min-width: 480px) {
+  body .introSpace .imgWrap .imgWrapInner img {
+    width: 140%;
+    transform: translateX(-20%); } }
+@media (min-width: 600px) {
+  body .introSpace .imgWrap .imgWrapInner img {
+    width: 120%;
+    transform: translateX(-15%); }
+  body .introSpace .introMessage {
+    width: 26em; }
+    body .introSpace .introMessage h3 {
+      line-height: 1.2em; }
+    body .introSpace .introMessage a, body .introSpace .introMessage a:visited {
+      font-size: 1.5em; } }
+@media (min-width: 700px) {
+  body header .logo img {
+    width: 40%; }
+  body .introSpace .imgWrap .imgWrapInner img {
+    width: 100%;
+    transform: translateX(0%); } }
+@media (min-width: 767px) {
+  body header .logo img {
+    width: 30%; }
+  body .introSpace .imgWrap .imgWrapInner img {
+    width: 103%;
+    transform: translate(-2%, -16%); }
+  body .introSpace .introMessage {
+    top: 0%; } }
 @media (min-width: 992px) {
+  body header {
+    background: #D1DEE9 url(../images/beltlineLogo.png) no-repeat center left 3em;
+    background-size: 17%; }
+    body header .menuWrapper {
+      display: none; }
+    body header .logo {
+      display: none; }
+    body header .menuWide {
+      display: block; }
+  body .introSpace .imgWrap .imgWrapInner {
+    height: 37em; }
+    body .introSpace .imgWrap .imgWrapInner img {
+      width: 100%;
+      transform: translate(0%, -21%); }
+  body .introSpace .introMessage {
+    right: 10%;
+    width: 31em;
+    top: 2%; }
   body .categories .category {
     height: 17em; }
   body .about h4 {
@@ -256,10 +360,24 @@ body {
     border-bottom: none; }
     body .trailsWrap ul.trailsList li a {
       padding-bottom: 0.25em; }
-      body .trailsWrap ul.trailsList li a:hover {
-        border-bottom: 1px solid #fff; }
+      body .trailsWrap ul.trailsList li a:before {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: 0.3s; }
+      body .trailsWrap ul.trailsList li a:hover:before {
+        visibility: visible;
+        transform: scaleX(1); }
   body .mapAbove {
     display: block; }
+  body .eastsideTrailInfo {
+    padding: 10em; }
   body .mapBelow {
     display: none; }
   body footer ul.socialMediaWrapper li {

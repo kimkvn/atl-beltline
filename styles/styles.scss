@@ -17,7 +17,29 @@ body{
   header{
     min-height: 95px;
     background: $lightBlue;
+
+    .searchBox input{
+      border: none;
+      padding: 0.25em;
+      &::-webkit-input-placeholder {
+           color: $blue;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           color: $blue;
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           color: $blue;
+        }
+
+        &:-ms-input-placeholder {
+           color: $blue;
+        }
+    }
+
     .menuWrapper{
+
       .menuBtn{
         display: block;
         position: relative;
@@ -40,93 +62,68 @@ body{
                 transition: background 0.3s;
         background-color: transparent;
         z-index: 2;
+        &:focus{
+          outline: none;
+        }
+        span{
+          display: block;
+          position: absolute;
+          top: 45px;
+          left: 30px;
+          right: 30px;
+          height: 4px;
+          background: $blue;
+          -webkit-transition: background 0 0.3s;
+                  transition: background 0 0.3s;
+          &::before, &::after{
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $blue;
+            content: "";
+            -webkit-transition-duration: 0.3s, 0.3s;
+                    transition-duration: 0.3s, 0.3s;
+            -webkit-transition-delay: 0.3s, 0;
+                    transition-delay: 0.3s, 0;
 
-
+          }
+          &::before{
+            top: -11px;
+            -webkit-transition-property: top, -webkit-transform;
+                    transition-property: top, transform;
+          }
+          &::after{
+            bottom: -11px;
+            -webkit-transition-property: bottom, -webkit-transform;
+                    transition-property: bottom, transform;
+          }
+        }
+        /* active state, i.e. menu open */
+        &.active{
+          span{
+            background: none;
+            &::before, &::after{
+              background: $white;
+              -webkit-transition-delay: 0, 0.3s;
+                      transition-delay: 0, 0.3s;
+            }
+            &::before{
+              top: 0;
+              -webkit-transform: rotate(45deg);
+                  -ms-transform: rotate(45deg);
+                      transform: rotate(45deg);
+            }
+            &::after{
+              bottom: 0;
+              -webkit-transform: rotate(-45deg);
+                  -ms-transform: rotate(-45deg);
+                      transform: rotate(-45deg);
+            }
+          }
+        }
       }
-      .menuBtn:focus {
-        outline: none;
-      }
-      .menuBtn span {
-        display: block;
-        position: absolute;
-        top: 45px;
-        left: 30px;
-        right: 30px;
-        height: 6px;
-        background: $blue;
-      }
-
-      .menuBtn span::before,
-      .menuBtn span::after {
-        position: absolute;
-        display: block;
-        left: 0;
-        width: 100%;
-        height: 6px;
-        background-color: $blue;
-        content: "";
-      }
-
-      .menuBtn span::before {
-        top: -15px;
-      }
-
-      .menuBtn span::after {
-        bottom: -15px;
-      }
-
-      .menuBtn span {
-        -webkit-transition: background 0 0.3s;
-                transition: background 0 0.3s;
-      }
-
-      .menuBtn span::before,
-      .menuBtn span::after {
-        -webkit-transition-duration: 0.3s, 0.3s;
-                transition-duration: 0.3s, 0.3s;
-        -webkit-transition-delay: 0.3s, 0;
-                transition-delay: 0.3s, 0;
-      }
-
-      .menuBtn span::before {
-        -webkit-transition-property: top, -webkit-transform;
-                transition-property: top, transform;
-      }
-
-      .menuBtn span::after {
-        -webkit-transition-property: bottom, -webkit-transform;
-                transition-property: bottom, transform;
-      }
-
-      /* active state, i.e. menu open */
-      .menuBtn.active span {
-        background: none;
-      }
-
-      .menuBtn.active span::before {
-        top: 0;
-        -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-                transform: rotate(45deg);
-      }
-
-      .menuBtn.active span::after {
-        bottom: 0;
-        -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-      }
-
-      .menuBtn.active span::before,
-      .menuBtn.active span::after {
-        background: $white;
-        -webkit-transition-delay: 0, 0.3s;
-                transition-delay: 0, 0.3s;
-      }
-
-
-
-
 
       .menu{
         display: none;
@@ -161,6 +158,37 @@ body{
         width: 50%;
       }
     }
+
+    .menuWide{
+      display: none;
+      padding-left: 25%;
+      padding-top: 2.75em;
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+          display: inline;
+          margin: 2em;
+          a{
+            text-transform: uppercase;
+            &:hover{
+              color: $red;
+            }
+          }
+        }
+        .searchBox{
+          display: inline;
+          float: right;
+          margin-right: 5em;
+          input{
+            text-align: right;
+          }
+        }
+      }
+     }
+
+
   }
 
   .introSpace{
@@ -168,7 +196,8 @@ body{
     .imgWrap{
       .imgWrapInner{
         overflow: hidden;
-        height: 27em;
+        width: 100%;
+        height: 30em;
         img{
           width: 170%;
           transform: translateX(-25%);
@@ -180,13 +209,18 @@ body{
       position: absolute;
       width: 18em;
       font-size: 0.75em;
-      top: 0;
+      top: 8%;
       right: 5%;
+
       h3{
         font-weight: normal;
+        font-size: 2em;
+        line-height: 1em;
       }
       a, a:visited{
         color: $blue;
+        font-size: 2em;
+        text-decoration: underline;
       }
     }
 
@@ -208,7 +242,38 @@ body{
   }
   .categories{
     a{
+      display: block;
       padding: 0;
+      text-decoration: none;
+      span{
+        transition: background 0.5s;
+      }
+      &:hover{
+        span.filter{
+          background: rgba(0, 0, 0, 0.0);
+        }
+        h4{
+          top: 45%;
+        }
+      }
+    }
+    .filter{
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      &.parksFilter{
+        background: rgba(255,0,0,0.4); /*Red*/
+      }
+      &.trailsFilter{
+        background: rgba(0,255,0,0.2); /*Green*/
+      }
+      &.eventsFilter{
+        background: rgba(255,255,0,0.3); /*Yellow*/
+      }
+      &.toursFilter{
+        background: rgba(0,0,255,0.3); /*Blue*/
+      }
     }
     .category{
       height: 8em;
@@ -222,6 +287,8 @@ body{
         position: relative;
         top: 50%;
         transform: translateY(-50%);
+        transition: top 0.3s;
+
       }
 
     }
@@ -265,6 +332,7 @@ body{
         a{
           color: $white;
           text-transform: uppercase;
+          position: relative;
         }
       }
     }
@@ -308,7 +376,7 @@ body{
 
   footer{
     background: $blue url(../images/footerBg.png) no-repeat center;
-    background-size: 100%;
+    background-size: cover;
     h5{
       margin: 0;
       text-align: center;
@@ -355,9 +423,133 @@ body{
 }
 
 
-/*   Media Queries   */
+/*---Media Queries-----*/
+
+@media(min-width: 480px){
+  body{
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          img{
+            width: 140%;
+            transform: translateX(-20%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(min-width: 600px){
+  body{
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          img{
+            width: 120%;
+            transform: translateX(-15%);
+          }
+        }
+      }
+
+      .introMessage{
+        width: 26em;
+
+        h3{
+          line-height: 1.2em;
+        }
+        a, a:visited{
+          font-size: 1.5em;
+        }
+      }
+
+    }
+  }
+}
+
+@media(min-width: 700px){
+  body{
+    header{
+      .logo{
+        img{
+          width: 40%;
+        }
+      }
+    }
+
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          img{
+            width: 100%;
+            transform: translateX(0%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(min-width: 767px){
+  body{
+    header{
+      .logo{
+        img{
+          width: 30%;
+        }
+      }
+    }
+    .introSpace{
+
+      .imgWrap{
+        .imgWrapInner{
+          img{
+            width: 103%;
+            transform: translate(-2%, -16%);
+          }
+        }
+      }
+      .introMessage{
+        top: 0%;
+      }
+    }
+  }
+}
+
 @media(min-width: 992px){
   body{
+    header{
+      background: $lightBlue url(../images/beltlineLogo.png) no-repeat center left 3em;
+      background-size: 17%;
+
+      .menuWrapper{
+        display: none;
+      }
+      .logo{
+        display: none;
+      }
+      .menuWide{
+        display: block;
+      }
+    }
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          height: 37em;
+          img{
+            width: 100%;
+            transform: translate(0%, -21%);
+          }
+        }
+      }
+      .introMessage{
+        right: 10%;
+        width: 31em;
+        top: 2%;
+      }
+    }
     .categories .category{
       height: 17em;
     }
@@ -371,8 +563,21 @@ body{
           border-bottom: none;
           a{
             padding-bottom: 0.25em;
-            &:hover{
-              border-bottom: 1px solid $white;
+            &:before{
+              content: "";
+              position: absolute;
+              background-color: #fff;
+              width: 100%;
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              visibility: hidden;
+              transform: scaleX(0);
+              transition: 0.3s;
+            }
+            &:hover:before{
+              visibility: visible;
+              transform: scaleX(1);
             }
           }
         }
@@ -382,6 +587,9 @@ body{
 
     .mapAbove{
       display: block;
+    }
+    .eastsideTrailInfo{
+      padding: 10em;
     }
     .mapBelow{
       display: none;
