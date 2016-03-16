@@ -174,8 +174,10 @@ body {
     display: block;
     padding: 0;
     text-decoration: none; }
+    body .categories a span {
+      transition: background 0.5s; }
     body .categories a:hover span.filter {
-      display: none; }
+      background: transparent; }
   body .categories .filter {
     height: 100%;
     width: 100%;

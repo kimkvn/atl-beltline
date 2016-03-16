@@ -245,9 +245,12 @@ body{
       display: block;
       padding: 0;
       text-decoration: none;
+      span{
+        transition: background 0.5s;
+      }
       &:hover{
         span.filter{
-          display: none;
+          background: rgba(0, 0, 0, 0.0);
         }
       }
     }
