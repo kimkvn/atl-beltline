@@ -167,6 +167,25 @@ body {
       margin: 0 auto; }
   body .categories a {
     padding: 0; }
+    body .categories a:hover span.filter {
+      display: none; }
+  body .categories .filter {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute; }
+    body .categories .filter.parksFilter {
+      background: rgba(255, 0, 0, 0.4);
+      /*Red*/ }
+    body .categories .filter.trailsFilter {
+      background: rgba(0, 255, 0, 0.2);
+      /*Green*/ }
+    body .categories .filter.eventsFilter {
+      background: rgba(255, 255, 0, 0.3);
+      /*Yellow*/ }
+    body .categories .filter.toursFilter {
+      background: rgba(0, 0, 255, 0.3);
+      /*Blue*/ }
   body .categories .category {
     height: 8em;
     background-size: 100%; }
@@ -295,6 +314,8 @@ body {
         border-bottom: 1px solid #fff; }
   body .mapAbove {
     display: block; }
+  body .eastsideTrailInfo {
+    padding: 10em; }
   body .mapBelow {
     display: none; }
   body footer ul.socialMediaWrapper li {

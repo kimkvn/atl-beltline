@@ -237,6 +237,29 @@ body{
   .categories{
     a{
       padding: 0;
+      &:hover{
+        span.filter{
+          display: none;
+        }
+      }
+    }
+    .filter{
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      &.parksFilter{
+        background: rgba(255,0,0,0.4); /*Red*/
+      }
+      &.trailsFilter{
+        background: rgba(0,255,0,0.2); /*Green*/
+      }
+      &.eventsFilter{
+        background: rgba(255,255,0,0.3); /*Yellow*/
+      }
+      &.toursFilter{
+        background: rgba(0,0,255,0.3); /*Blue*/
+      }
     }
     .category{
       height: 8em;
@@ -425,6 +448,9 @@ body{
 
     .mapAbove{
       display: block;
+    }
+    .eastsideTrailInfo{
+      padding: 10em;
     }
     .mapBelow{
       display: none;
