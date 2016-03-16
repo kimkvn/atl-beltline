@@ -196,7 +196,8 @@ body{
     .imgWrap{
       .imgWrapInner{
         overflow: hidden;
-        height: 27em;
+        width: 100%;
+        height: 30em;
         img{
           width: 170%;
           transform: translateX(-25%);
@@ -204,6 +205,9 @@ body{
       }
     }
     .introMessage{
+
+      display: none;
+
       color: $blue;
       position: absolute;
       width: 18em;
@@ -407,6 +411,85 @@ body{
 
 
 /*   Media Queries   */
+
+
+@media(min-width: 480px){
+  body{
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          img{
+            width: 140%;
+            transform: translateX(-20%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(min-width: 600px){
+  body{
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          img{
+            width: 120%;
+            transform: translateX(-15%);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: 700px){
+  body{
+    header{
+      .logo{
+        img{
+          width: 40%;
+        }
+      }
+    }
+
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          img{
+            width: 100%;
+            transform: translateX(0%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media(min-width: 767px){
+  body{
+    header{
+      .logo{
+        img{
+          width: 30%;
+        }
+      }
+    }
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          img{
+            width: 103%;
+            transform: translate(-2%, -16%);
+          }
+        }
+      }
+    }
+  }
+}
+
 @media(min-width: 992px){
   body{
     header{
@@ -423,7 +506,17 @@ body{
         display: block;
       }
     }
-
+    .introSpace{
+      .imgWrap{
+        .imgWrapInner{
+          height: 34em;
+          img{
+            width: 100%;
+            transform: translate(0%, -21%);
+          }
+        }
+      }
+    }
     .categories .category{
       height: 17em;
     }
