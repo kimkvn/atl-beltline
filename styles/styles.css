@@ -178,6 +178,8 @@ body {
       transition: background 0.5s; }
     body .categories a:hover span.filter {
       background: transparent; }
+    body .categories a:hover h4 {
+      top: 45%; }
   body .categories .filter {
     height: 100%;
     width: 100%;
@@ -205,7 +207,8 @@ body {
       text-align: center;
       position: relative;
       top: 50%;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      transition: top 0.3s; }
   body .categories .category.parks {
     background: url(../images/child.jpg) 50% 33%;
     background-size: 100%; }
@@ -238,7 +241,8 @@ body {
         padding: 0.5em; }
         body .trailsWrap ul.trailsList li a {
           color: #fff;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          position: relative; }
   body .eastsideTrailWrap {
     background: #D1DEE9; }
   body .eastsideTrailInfo {
@@ -356,8 +360,20 @@ body {
     border-bottom: none; }
     body .trailsWrap ul.trailsList li a {
       padding-bottom: 0.25em; }
-      body .trailsWrap ul.trailsList li a:hover {
-        border-bottom: 1px solid #fff; }
+      body .trailsWrap ul.trailsList li a:before {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: 0.3s; }
+      body .trailsWrap ul.trailsList li a:hover:before {
+        visibility: visible;
+        transform: scaleX(1); }
   body .mapAbove {
     display: block; }
   body .eastsideTrailInfo {
