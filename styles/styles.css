@@ -145,17 +145,20 @@ body {
         width: 170%;
         transform: translateX(-25%); }
     body .introSpace .introMessage {
-      display: none;
       color: #1B528A;
       position: absolute;
       width: 18em;
       font-size: 0.75em;
-      top: 0;
+      top: 8%;
       right: 5%; }
       body .introSpace .introMessage h3 {
-        font-weight: normal; }
+        font-weight: normal;
+        font-size: 2em;
+        line-height: 1em; }
       body .introSpace .introMessage a, body .introSpace .introMessage a:visited {
-        color: #1B528A; }
+        color: #1B528A;
+        font-size: 2em;
+        text-decoration: underline; }
   body .about {
     text-align: center;
     color: #fff;
@@ -168,7 +171,9 @@ body {
       line-height: 1.5em;
       margin: 0 auto; }
   body .categories a {
-    padding: 0; }
+    display: block;
+    padding: 0;
+    text-decoration: none; }
     body .categories a:hover span.filter {
       display: none; }
   body .categories .filter {
@@ -292,7 +297,7 @@ body {
       color: #fff;
       padding-bottom: 1.5em; }
 
-/*   Media Queries   */
+/*---Media Queries-----*/
 @media (min-width: 480px) {
   body .introSpace .imgWrap .imgWrapInner img {
     width: 140%;
@@ -300,7 +305,13 @@ body {
 @media (min-width: 600px) {
   body .introSpace .imgWrap .imgWrapInner img {
     width: 120%;
-    transform: translateX(-15%); } }
+    transform: translateX(-15%); }
+  body .introSpace .introMessage {
+    width: 26em; }
+    body .introSpace .introMessage h3 {
+      line-height: 1.2em; }
+    body .introSpace .introMessage a, body .introSpace .introMessage a:visited {
+      font-size: 1.5em; } }
 @media (min-width: 700px) {
   body header .logo img {
     width: 40%; }
@@ -312,11 +323,13 @@ body {
     width: 30%; }
   body .introSpace .imgWrap .imgWrapInner img {
     width: 103%;
-    transform: translate(-2%, -16%); } }
+    transform: translate(-2%, -16%); }
+  body .introSpace .introMessage {
+    top: 0%; } }
 @media (min-width: 992px) {
   body header {
     background: #D1DEE9 url(../images/beltlineLogo.png) no-repeat center left 3em;
-    background-size: 20%; }
+    background-size: 17%; }
     body header .menuWrapper {
       display: none; }
     body header .logo {
@@ -324,10 +337,14 @@ body {
     body header .menuWide {
       display: block; }
   body .introSpace .imgWrap .imgWrapInner {
-    height: 34em; }
+    height: 37em; }
     body .introSpace .imgWrap .imgWrapInner img {
       width: 100%;
       transform: translate(0%, -21%); }
+  body .introSpace .introMessage {
+    right: 10%;
+    width: 31em;
+    top: 2%; }
   body .categories .category {
     height: 17em; }
   body .about h4 {
