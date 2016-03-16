@@ -9,6 +9,19 @@ body {
   body header {
     min-height: 95px;
     background: #D1DEE9; }
+    body header .searchBox input {
+      border: none;
+      padding: 0.25em; }
+      body header .searchBox input::-webkit-input-placeholder {
+        color: #1B528A; }
+      body header .searchBox input:-moz-placeholder {
+        /* Firefox 18- */
+        color: #1B528A; }
+      body header .searchBox input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #1B528A; }
+      body header .searchBox input:-ms-input-placeholder {
+        color: #1B528A; }
     body header .menuWrapper .menuBtn {
       display: block;
       position: relative;
@@ -101,6 +114,27 @@ body {
       text-align: right; }
       body header .logo img {
         width: 50%; }
+    body header .menuWide {
+      display: none;
+      padding-left: 25%;
+      padding-top: 2.75em; }
+      body header .menuWide ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        body header .menuWide ul li {
+          display: inline;
+          margin: 2em; }
+          body header .menuWide ul li a {
+            text-transform: uppercase; }
+            body header .menuWide ul li a:hover {
+              color: #D24958; }
+        body header .menuWide ul .searchBox {
+          display: inline;
+          float: right;
+          margin-right: 5em; }
+          body header .menuWide ul .searchBox input {
+            text-align: right; }
   body .introSpace {
     position: relative; }
     body .introSpace .imgWrap .imgWrapInner {
@@ -239,6 +273,15 @@ body {
 
 /*   Media Queries   */
 @media (min-width: 992px) {
+  body header {
+    background: #D1DEE9 url(../images/beltlineLogo.png) no-repeat center left 3em;
+    background-size: 20%; }
+    body header .menuWrapper {
+      display: none; }
+    body header .logo {
+      display: none; }
+    body header .menuWide {
+      display: block; }
   body .categories .category {
     height: 17em; }
   body .about h4 {

@@ -17,6 +17,27 @@ body{
   header{
     min-height: 95px;
     background: $lightBlue;
+
+    .searchBox input{
+      border: none;
+      padding: 0.25em;
+      &::-webkit-input-placeholder {
+           color: $blue;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           color: $blue;
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           color: $blue;
+        }
+
+        &:-ms-input-placeholder {
+           color: $blue;
+        }
+    }
+
     .menuWrapper{
 
       .menuBtn{
@@ -137,6 +158,37 @@ body{
         width: 50%;
       }
     }
+
+    .menuWide{
+      display: none;
+      padding-left: 25%;
+      padding-top: 2.75em;
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+          display: inline;
+          margin: 2em;
+          a{
+            text-transform: uppercase;
+            &:hover{
+              color: $red;
+            }
+          }
+        }
+        .searchBox{
+          display: inline;
+          float: right;
+          margin-right: 5em;
+          input{
+            text-align: right;
+          }
+        }
+      }
+     }
+
+
   }
 
   .introSpace{
@@ -334,6 +386,21 @@ body{
 /*   Media Queries   */
 @media(min-width: 992px){
   body{
+    header{
+      background: $lightBlue url(../images/beltlineLogo.png) no-repeat center left 3em;
+      background-size: 20%;
+
+      .menuWrapper{
+        display: none;
+      }
+      .logo{
+        display: none;
+      }
+      .menuWide{
+        display: block;
+      }
+    }
+
     .categories .category{
       height: 17em;
     }
