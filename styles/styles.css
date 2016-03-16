@@ -9,30 +9,29 @@ body {
   body header {
     min-height: 95px;
     background: #D1DEE9; }
-    body header .menuWrapper {
+    body header .menuWrapper .menuBtn {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 108px;
+      height: 96px;
+      font-size: 0;
+      text-indent: -9999px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+      cursor: pointer;
+      float: left;
+      -webkit-transition: background 0.3s;
+      transition: background 0.3s;
+      background-color: transparent;
+      z-index: 2;
       /* active state, i.e. menu open */ }
-      body header .menuWrapper .menuBtn {
-        display: block;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        width: 108px;
-        height: 96px;
-        font-size: 0;
-        text-indent: -9999px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        box-shadow: none;
-        border-radius: 0;
-        border: none;
-        cursor: pointer;
-        float: left;
-        -webkit-transition: background 0.3s;
-        transition: background 0.3s;
-        background-color: transparent;
-        z-index: 2; }
       body header .menuWrapper .menuBtn:focus {
         outline: none; }
       body header .menuWrapper .menuBtn span {
@@ -42,69 +41,62 @@ body {
         left: 30px;
         right: 30px;
         height: 4px;
-        background: #1B528A; }
-      body header .menuWrapper .menuBtn span::before,
-      body header .menuWrapper .menuBtn span::after {
-        position: absolute;
-        display: block;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background-color: #1B528A;
-        content: ""; }
-      body header .menuWrapper .menuBtn span::before {
-        top: -11px; }
-      body header .menuWrapper .menuBtn span::after {
-        bottom: -11px; }
-      body header .menuWrapper .menuBtn span {
+        background: #1B528A;
         -webkit-transition: background 0 0.3s;
         transition: background 0 0.3s; }
-      body header .menuWrapper .menuBtn span::before,
-      body header .menuWrapper .menuBtn span::after {
-        -webkit-transition-duration: 0.3s, 0.3s;
-        transition-duration: 0.3s, 0.3s;
-        -webkit-transition-delay: 0.3s, 0;
-        transition-delay: 0.3s, 0; }
-      body header .menuWrapper .menuBtn span::before {
-        -webkit-transition-property: top, -webkit-transform;
-        transition-property: top, transform; }
-      body header .menuWrapper .menuBtn span::after {
-        -webkit-transition-property: bottom, -webkit-transform;
-        transition-property: bottom, transform; }
+        body header .menuWrapper .menuBtn span::before, body header .menuWrapper .menuBtn span::after {
+          position: absolute;
+          display: block;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background-color: #1B528A;
+          content: "";
+          -webkit-transition-duration: 0.3s, 0.3s;
+          transition-duration: 0.3s, 0.3s;
+          -webkit-transition-delay: 0.3s, 0;
+          transition-delay: 0.3s, 0; }
+        body header .menuWrapper .menuBtn span::before {
+          top: -11px;
+          -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform; }
+        body header .menuWrapper .menuBtn span::after {
+          bottom: -11px;
+          -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform; }
       body header .menuWrapper .menuBtn.active span {
         background: none; }
-      body header .menuWrapper .menuBtn.active span::before {
-        top: 0;
-        -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-        transform: rotate(45deg); }
-      body header .menuWrapper .menuBtn.active span::after {
-        bottom: 0;
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg); }
-      body header .menuWrapper .menuBtn.active span::before,
-      body header .menuWrapper .menuBtn.active span::after {
-        background: #fff;
-        -webkit-transition-delay: 0, 0.3s;
-        transition-delay: 0, 0.3s; }
-      body header .menuWrapper .menu {
-        display: none;
-        position: absolute;
-        z-index: 1;
-        padding: 8em 2.5em;
-        background: #1B528A; }
-        body header .menuWrapper .menu ul {
-          padding: 0;
-          list-style: none; }
-          body header .menuWrapper .menu ul li {
-            margin: 2em 0; }
-            body header .menuWrapper .menu ul li a {
-              font-size: 1.5em;
-              color: #fff; }
-        body header .menuWrapper .menu .searchBox input {
-          height: 2em;
-          font-size: 1.5em; }
+        body header .menuWrapper .menuBtn.active span::before, body header .menuWrapper .menuBtn.active span::after {
+          background: #fff;
+          -webkit-transition-delay: 0, 0.3s;
+          transition-delay: 0, 0.3s; }
+        body header .menuWrapper .menuBtn.active span::before {
+          top: 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        body header .menuWrapper .menuBtn.active span::after {
+          bottom: 0;
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+    body header .menuWrapper .menu {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      padding: 8em 2.5em;
+      background: #1B528A; }
+      body header .menuWrapper .menu ul {
+        padding: 0;
+        list-style: none; }
+        body header .menuWrapper .menu ul li {
+          margin: 2em 0; }
+          body header .menuWrapper .menu ul li a {
+            font-size: 1.5em;
+            color: #fff; }
+      body header .menuWrapper .menu .searchBox input {
+        height: 2em;
+        font-size: 1.5em; }
     body header .logo {
       text-align: right; }
       body header .logo img {
@@ -212,7 +204,7 @@ body {
         margin: 0 auto; }
   body footer {
     background: #1B528A url(../images/footerBg.png) no-repeat center;
-    background-size: 100%; }
+    background-size: cover; }
     body footer h5 {
       margin: 0;
       text-align: center;
